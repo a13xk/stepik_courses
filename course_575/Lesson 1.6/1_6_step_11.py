@@ -1,9 +1,10 @@
 from selenium import webdriver
 import time
 
-try: 
+
+browser = webdriver.Chrome()
+try:
     link = "http://suninjuly.github.io/registration2.html"
-    browser = webdriver.Chrome()
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
@@ -13,7 +14,6 @@ try:
     input2.send_keys("Petrov")
     input3 = browser.find_element_by_css_selector('.first_block .third')
     input3.send_keys("simpl@gmail.com")
-    
 
     # Отправляем заполненную форму
     button = browser.find_element_by_css_selector("button.btn")
